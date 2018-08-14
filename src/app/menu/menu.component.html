@@ -1,0 +1,47 @@
+<div class="container"
+     fxLayout="column"
+     fxlayoutGap="10px">
+
+     <div fxFlex>
+       <div>
+         <h3>Menu</h3>
+         <hr>
+       </div>
+     </div>
+     <!-- mat-list helps to layout content in a list fromta while mat-grid-list 
+      layout content in a grid format -->
+     <div fxFlex>
+        <mat-grid-list cols="2" rowHeight="200px">
+          <!--*ngFor is a structural directive that allows one to iterate over an array of items -->
+          <!-- <mat-list-item *ngFor="let dish of dishes"> -->
+          <mat-grid-tile *ngFor="let dish of dishes">
+            <!-- there is no need for mat-list-avatar when working with mat-grid-list -->
+            <img src={{dish.image}} alt={{dish.name}}>
+            <mat-grid-tile-footer>
+              <h1 mat-line>{{dish.name | uppercase}}</h1>
+            </mat-grid-tile-footer>
+            <!--<p mat-line>
+              <span>{{dish.description}}</span>
+            </p> -->
+          </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+
+    <div fxFlex *ngIf="selectedDish">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <h3>{{selectedDish.name | uppercase}}</h3>
+          </mat-card-title>  
+        </mat-card-header>
+        <img mat-card-image src="{{selectedDish.image}}" alt="{{selectedDish.name}}">
+        <mat-card-content>
+          <p>{{selectedDish.description}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+</div>
