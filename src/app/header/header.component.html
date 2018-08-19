@@ -1,0 +1,48 @@
+<!-- <mat-toolbar color="primary">
+  <span><img src="/assests/images/logo.png" height=30 width=41></span>
+  <a mat-button><span class="fa fa-home fa-lg"></span>Home</a>
+  <a mat-button><span class="fa fa-info fa-lg"></span>About</a>
+  <a mat-button><span class="fa fa-list fa-lg"></span>Menu</a>
+  <a mat-button><span class="fa fa-address-card fa-lg"></span>Content</a>
+</mat-toolbar>
+
+<div class="container jumbotron"
+    fxLayout="column"
+    fxFlex="row"
+    fxLayout.sm="column"
+    fxLayout.xs="column"
+    fxLayoutAlign.xs="start center"
+    fxLayoutAlign.sm="start center"
+    fxLayoutGap=10px>
+
+  
+</div>
+ -->
+<mat-toolbar color="primary">
+  <span><img src="/assests/images/logo.png" height=30 width=41></span>
+  <a mat-button routerLink="/home"><span class="fa fa-home fa-lg"></span>Home</a>
+  <a mat-button><span class="fa fa-info fa-lg"></span>About</a>
+  <a mat-button routerLink="/menu"><span class="fa fa-list fa-lg"></span>Menu</a>
+  <a mat-button><span class="fa fa-address-card fa-lg"></span>Content</a>
+</mat-toolbar>
+<div class="container jumbotron"
+    fxLayout="row"
+    fxLayoutGap=10px
+    fxLayout.sm="column"
+    fxLayout.xs="column"
+    fxLayoutAlign.xs="start center"
+    fxLayoutAlign.sm="start center"
+    
+    >
+  <div fxFlex.gt-sm=50%>
+    <h1>Ristorante Con Fusion</h1>
+    <p>We take inspiration from the World's best cuisines, and create the best that will
+      tickle your culinary senses
+    </p>
+  </div>
+  <div fxFlex.gt-sm=20%>
+    <img src="/assests/images/logo.png" alt="Logo">
+  </div>
+  <div fxflex></div>
+</div>
+
