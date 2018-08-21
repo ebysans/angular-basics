@@ -1,11 +1,14 @@
 import {Dish} from './dish';
 
 export const DISHES: Dish[]= [
-    {name: 'Uthappizza',
+    {
+    id:0,
+    name: 'Uthappizza',
     image: '/assets/images/uthappizza.png',
     category: 'mains',
     label:'Hot',
     price: '4.99',
+    featured: true,
     description: 'A unique combination of indian Uthappam',
     comments: [
       {
@@ -22,11 +25,13 @@ export const DISHES: Dish[]= [
       }]
     },
     {
+    id: 1,
     name: 'Zucchipakoda',
     image: '/assets/images/zucchipakoda.jpg',
     category: 'appetizer',
     label:'',
     price: '1.99',
+    featured: false,
     description: 'Deep fried Zucchinu coated with mildly spe',
     comments: [
       {
@@ -43,11 +48,13 @@ export const DISHES: Dish[]= [
       }]
     },                  
     {
+    id: 2,
     name: 'Vadonut',
     image: '/assets/images/vadonut.png',
     category: 'appetizer',
     label:'New ',
     price: '1.99',
+    featured: false,
     description: 'A quintessential conFusion appetizer with mildly spe',
     comments: [
       {
@@ -64,11 +71,13 @@ export const DISHES: Dish[]= [
       }]
   }                   
   ,{
+    id: 3,
     name: 'ElaiCheese Cake',
     image: '/assets/images/elaiCheesecake.png',
     category: 'desert',
     label:'',
     price: '1.99',
+    featured: false,
     description: 'Deep fried Zucchinu coated with mildly spe',
     comments: [
       {
