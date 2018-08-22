@@ -2,7 +2,7 @@
      fxLayout="column"
      fxlayoutGap="10px">
   <div fxFlex>
-    <mat-grid-list cols="2" rowHeight="500px" >
+    <mat-grid-list cols="2" rowHeight="600px" >
       <mat-grid-tile >
         <mat-card *ngIf="dish">
           <mat-card-header>
@@ -15,6 +15,7 @@
             <p>{{dish.description}}</p>
           </mat-card-content>
           <mat-card-actions>
+            <button mat-button (click)="goBack()">BACK</button>
             <button mat-button>LIKE</button>
             <button mat-button>SHARE</button>
           </mat-card-actions>
