@@ -10,7 +10,7 @@
      </div>
      <!-- mat-list helps to layout content in a list fromta while mat-grid-list 
       layout content in a grid format -->
-     <div fxFlex>
+     <div fxFlex *ngIf="dishes">
         <mat-grid-list cols="2" rowHeight="200px">
           <!--*ngFor is a structural directive that allows one to iterate over an array of items -->
           <!-- <mat-list-item *ngFor="let dish of dishes"> -->
@@ -26,7 +26,10 @@
             </p> -->
           </mat-grid-tile>
         </mat-grid-list>
-    </div>
+     </div>""
+     <div [hidden]="dishes">
+       <mat-spinner></mat-spinner><h4>Loading ... please wait</h4>
+     </div>
 <!-- we can use a router to add a component to another component instead of adding the selector of a component as a tag to another compnent -->
     <!-- <app-dishdetail [dish]="selectedDish"></app-dishdetail> -->
 
